@@ -12,7 +12,7 @@ This baby should be carried manually to your machine and installed. Later I will
 Thanks for understanding!
 
 Installation:
-1. Download the Project as Zip file to your system
+1. Download the Project as Zip file to your system (This page -> Top Right -> Clone or Download -> Download ZIP)
 2. Open Sublime and if you did not install any plugin before then go to Tools -> Install package control
 3. In the Sublime window, when the other desirable packages are installed, pls go to the:
 Preference -> Package control -> Browse Packages
