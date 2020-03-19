@@ -1,0 +1,25 @@
+
+[
+    {
+        "caption" : "WireShrek",
+        "children":
+            [   
+                {
+                "id" : "WinNew",
+                "caption" : "Find to Tab",
+                "command": "newwin" 
+                },
+                {
+                "id" : "PuttoWinNew",
+                "caption" : "Put to Tab",
+                "command": "putnewwin" 
+                },           
+                {
+                "id" : "CloseNahui",
+                "caption" : "Close",
+                "command": "closenahui",
+                "keys": ["ctrl+shift+x"], 
+                },
+            ]
+    }
+]
