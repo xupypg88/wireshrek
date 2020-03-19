@@ -6,10 +6,6 @@ import os
 #Job.Backup_Job_For_restore.Backup.log Job.CPM_Backup__SUK__-_Daily.Backup.log
 
 
-
-# 
-buff=''
-
 #close naher window
 class ClosenahuiCommand(sublime_plugin.WindowCommand):
 	def run(self):
@@ -18,7 +14,7 @@ class ClosenahuiCommand(sublime_plugin.WindowCommand):
 
 
 
-class NewwinCommand(sublime_plugin.WindowCommand):
+class Find2tabCommand(sublime_plugin.WindowCommand):
 	def run(self):
 
 		v = self.window.active_view()
@@ -41,7 +37,7 @@ class NewwinCommand(sublime_plugin.WindowCommand):
 		viewv.run_command('testexec', { "lines" : buffa })
 		viewv.set_syntax_file('Packages/WireShrek/wireshrek.tmLanguage')
 
-class PutnewwinCommand(sublime_plugin.WindowCommand):
+class Put2tabCommand(sublime_plugin.WindowCommand):
 	def run(self):
 		v = self.window.active_view()
 
@@ -66,3 +62,45 @@ class PutnewwinCommand(sublime_plugin.WindowCommand):
 
 		viewv.run_command('testexec', { "lines" : lines })
 		viewv.set_syntax_file('Packages/WireShrek/wireshrek.tmLanguage')
+
+class ShowsobrCommand(sublime_plugin.WindowCommand):
+	def run(self):
+		#only one must be uncommented
+		#self.choosing_run()
+		self.last_run()
+
+	def choosing_run(self):
+
+		v = self.window.active_view()
+
+		
+		for viewitem in self.window.views():
+			if viewitem.name() == 'testo':
+				viewv = viewitem
+
+		if 'viewv' not in locals():
+			self.window.new_file()
+			viewv = self.window.active_view()
+
+			viewv.set_name('testo')
+
+		#find the 0 symbols region point - cursor point in chars from the beginning
+		pnt = v.sel()[0].begin()
+		#find the line number (starts from 0)
+		(xpos, ypos ) = v.rowcol(pnt)
+
+		#select the correct log run
+
+		lines = [ str(xpos)] 
+		lines.insert(0, 'Test:\n')
+		lines.append('\n---   ---   ---\n')
+		viewv.run_command('testexec', { "lines" : lines })
+
+	def last_run(self):
+		self.window.active_view().show_popup("<a href='README.md'>It's not implmented yet. =(</a>",on_navigate=self.browserok)
+		return
+
+	def browserok(self,href):
+		self.window.open_file(str(href))
+		print('starting...')
+		return
