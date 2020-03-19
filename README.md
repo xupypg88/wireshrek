@@ -23,6 +23,18 @@ Restart the Sublime may be necessary.
 
 You can simply check if it went fine by right-clicking on the log - there should be one more point in the context menu - WireShrek
 
-Released:
-#Find to tab
+# Released:
+- Find to tab
 The feature finds al the selected (even multiple) parts in the file and places all identical entried into a new tab. (Find all analog but economizes time)
+- Put to tab
+The feature cpoies the selection and places the one and all the following selections into a single tab called "dumper".
+In addition, it separates all entries and adds the file path where from it was copied. Helps out when you need to put  several fragments into a single file for escalation for example or whatever.
+- Close 
+The feature closes even unsaved file without disturbing you with a question if you want to save it. Cancels all modifications of the file. Shortcut: Ctrl + Shift + X
+
+# Coming
+- I am SOBeR
+The feature should gether information from the VMC log for the date of this log where you right-clicked.
+It should show: extents and its names/IPs, numer of cores and RAM if possible, concurrent tasks, object storage.
+If it will fire well, I will add the notification about obvious incorrect concurrent task setup + job IDs (names in future) that are targeted to the SOBR(s)
+
