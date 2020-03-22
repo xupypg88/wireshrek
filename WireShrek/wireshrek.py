@@ -67,7 +67,7 @@ class ShowsobrCommand(sublime_plugin.WindowCommand):
 	def run(self):
 		#only one must be uncommented
 		#self.choosing_run()
-		self.last_run()
+		self.first_run()
 
 	def choosing_run(self):
 
@@ -96,11 +96,26 @@ class ShowsobrCommand(sublime_plugin.WindowCommand):
 		lines.append('\n---   ---   ---\n')
 		viewv.run_command('testexec', { "lines" : lines })
 
-	def last_run(self):
-		self.window.active_view().show_popup("<a href='README.md'>It's not implmented yet. =(</a>",on_navigate=self.browserok)
+	def first_run(self):
+		#self.window.active_view().show_popup("<a href='README.md'>It's not implmented yet. =(</a>",on_navigate=self.browserok)
+		with open(self.window.active_view().file_name(), 'r') as fh:
+			self.fhcontents = fh.readlines()	
+		
+		dates = self.search_lines(self.fhcontents, 'UTC Time: ')
+
+		for date in dates:
+			print(self.fhcontents[date].split('[')[1].split(']')[0])
+
 		return
 
 	def browserok(self,href):
 		self.window.open_file(str(href))
 		print('starting...')
 		return
+
+	def search_lines(self, array, keyword):
+		result = []
+		for i in range(0, len(array)):
+			if keyword in array[i]:
+				result.append(i)
+		return result

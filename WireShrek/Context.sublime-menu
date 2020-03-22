@@ -5,14 +5,20 @@
         "children":
             [   
                 {
-                "id" : "WinNew",
+                "id" : "Find2tab",
                 "caption" : "Find to Tab",
-                "command": "newwin" 
+                "command": "find2tab" 
                 },
                 {
-                "id" : "PuttoWinNew",
+                "id" : "Put2tab",
                 "caption" : "Put to Tab",
-                "command": "putnewwin" 
+                "command": "put2tab" 
+                },           
+                {
+                "id" : "ShowSOBR",
+                "caption" : "I am SOBeR",
+                "command": "showsobr",
+                "keys": ["ctrl+shift+x"], 
                 },           
                 {
                 "id" : "CloseNahui",
