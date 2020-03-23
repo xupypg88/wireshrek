@@ -12,7 +12,13 @@ class ClosenahuiCommand(sublime_plugin.WindowCommand):
 		self.window.active_view().set_scratch(True)
 		self.window.active_view().close()
 
-
+class TestexecCommand(sublime_plugin.TextCommand):
+	def run(self, edit, lines):
+		currvw = self.view
+		texta=''
+		for line in lines:
+			texta += line
+		self.view.insert(edit, self.view.size(), texta)
 
 class Find2tabCommand(sublime_plugin.WindowCommand):
 	def run(self):
