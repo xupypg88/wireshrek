@@ -18,6 +18,7 @@ Installation:
 Preference -> Package control -> Browse Packages
 4. Unzip the WireShrek folder and put the folder as is in the Packages folder you opened on the previous step.
 The folder name should remain WireShrek
+5. The file Default.sublime-keymap should be placed to User subfolder (Sublime Text 3\Packages\User)
 
 Restart the Sublime may be necessary.
 
