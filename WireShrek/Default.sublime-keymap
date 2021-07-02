@@ -1,0 +1,6 @@
+[
+    {
+                "command": "closenahui",
+                "keys": ["ctrl+shift+x"]                 
+    }
+]
