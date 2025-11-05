@@ -1,8 +1,8 @@
 # WireShrek
 Small tool/Sublime plugin that should help to go though the Veeam log easier
-Firstly, no warranty, just a free useful tool.
-Second, usage and feeback appreciated
-Thirdly, any issues are reviewed only here in the Issues section, no other way for communication in regards to features or bugs
+ - Firstly, no warranty, just a free useful tool.
+ - Second, usage and feeback appreciated
+ - Thirdly, any issues are reviewed only here in the Issues section, no other way for communication in regards to features or bugs
 (Sorry, may be different in future)
 
 Enjoy! :)
